@@ -19,7 +19,7 @@ h1 {
 	font-style: italic;
 }
 
-.aaaa {
+.title {
 	background: black;
 	color: springgreen;
 	font-weight: bold;
@@ -28,7 +28,7 @@ h1 {
 	border-width: 2px;
 }
 
-.message {
+.text {
 	background: black;
 	color: beige;
 	border-radius: 5px;
@@ -38,7 +38,3 @@ h1 {
 	height: 200px;
 	font-size: 15px;
 }
-
-
-
-
