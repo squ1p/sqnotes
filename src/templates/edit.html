@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}" type="text/css" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+	<title>squip_notes</title>
+	</head>
+	<body>
+
+	<h1>$ ~/squip_notes</h3>
+	<div class="div1">
+		<form action="." method="POST">
+			<textarea type="text" name="title" class="title">{{ ntitle }}</textarea><br>
+			<textarea type="text" name="text" rows = "5" cols = "60*" class="text">{{ ntext }}</textarea><br>
+			<button type="submit" name="submit">OK</button>
+		</form>
+
+		You are editing {{ notenumber }} <br>
+		<!--Its title is {{ ntitle }} <br>
+			Its text says {{ ntext }} <br>-->
+		<br>
+	{{ nr }} 
+	<div>
+
+  </body>
+  </meta>
+  </html>
+
