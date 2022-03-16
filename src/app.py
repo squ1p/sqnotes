@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 #coding: utf-8
 from flask import Flask, render_template, Markup, request
-from os.path import exists
-import datetime, time, pickle
+import markdown
 
 #!---------- squiNotes.py ----------
 # My notes-taking app
 #-----------------------------!
+
+
 class note:
     def __init__(self, createtime: int, modtime: int, title: str, text: str):
         """
@@ -22,6 +23,7 @@ class note:
         """
         Render the given timestamp as dd/mm/yyyy-hh:mm
         """
+        import datetime
         timestamp = datetime.datetime.fromtimestamp(pretimestamp)
         timestamp = timestamp.strftime("%d/%m/%Y-%H:%M:%S")
         return timestamp
@@ -34,7 +36,7 @@ class note:
         <hr>
         <div class="notetitle">{Markup.escape(self.title)}</div><br>
         <div class="notetime">Created : {self.rendertime(self.createtime)} Modified : {self.rendertime(self.modtime)}</div><br>
-        <div class="notetext">{Markup.escape(self.text)}</div><br>"""
+        <div class="notetext">{markdown.markdown(self.text)}</div><br>"""
         return Markup(rendered)
 
     def __str__(self):
@@ -54,6 +56,7 @@ def dumpnotes(notes):
     """
     Get our notes list and save them as pickle to notes.pickle
     """
+    import pickle
     with open('notes.pickle', 'wb') as mpf:
         pickle.dump(notes, mpf)
     
@@ -63,6 +66,9 @@ def getnotes():
     """
     Get our notes from the file notes.pickle
     """
+    from os.path import exists
+    import pickle
+
     if exists("./notes.pickle"):
         with open('notes.pickle', 'rb') as mpf:
             notes = pickle.load(mpf)
@@ -82,6 +88,7 @@ def render():
 
 @app.route('/', methods=['POST'])
 def homepage():
+    import time
     notetitle = request.form['title']
     notetext = request.form['text']
     rightnow = int(time.time())
