@@ -7,12 +7,13 @@
 	</head>
 	<body>
 
-	<h1>$ ~/squip_notes</h3>
+	<h1 class="pagetitle">$ ~/squip_notes</h1>
 	<div class="div1">
 		<form action="." method="POST">
 			<textarea type="text" name="title" class="title">{{ ntitle }}</textarea><br>
-			<textarea type="text" name="text" rows = "5" cols = "60*" class="text">{{ ntext }}</textarea><br>
+			<textarea type="text" name="text" rows = "50" cols = "60*" class="text">{{ ntext }}</textarea><br>
 			<button type="submit" name="submit">OK</button>
+			<div class="notetime">Note : you can drag the textbox to make it bigger.</div>
 		</form>
 
 		You are editing {{ notenumber }} <br>

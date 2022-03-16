@@ -34,12 +34,13 @@ class note:
         """
         rendered = f"""
         <hr>
-        <div class="notetitle">{Markup.escape(self.title)}</div><br>
-        <div class="notetime">Created : {self.rendertime(self.createtime)} Modified : {self.rendertime(self.modtime)}</div><br>
-        <div class="notetext">{markdown.markdown(self.text)}</div><br>
+        <div class="notetitle">{Markup.escape(self.title)}</div>
         <form action="." method="GET" name="{self.createtime}">
-        <button type="submit" name="delete" value="{self.createtime}" class="delbutton">Delete this</button><button type="submit" name="edit" value="{self.createtime}" class="editbutton">Edit this</button>
-        </form><br>
+        <button type="submit" name="delete" value="{self.createtime}" class="delbutton">Delete</button>|<button type="submit" name="edit" value="{self.createtime}" class="editbutton">Edit</button>
+        </form>
+        <div class="notetime">Created : {self.rendertime(self.createtime)}
+        <br>Modified : {self.rendertime(self.modtime)}</div><br>
+        <div class="notetext">{markdown.markdown(self.text, extensions=['fenced_code', 'codehilite'])}</div><br>
         """
         return Markup(rendered)
 
