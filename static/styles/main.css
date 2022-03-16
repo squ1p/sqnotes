@@ -1,0 +1,44 @@
+html {
+	background-color: #393c42;
+	font-family: 'Source Sans Pro';
+	color: lightgrey;
+}
+
+h1 {
+	color: green;
+}
+
+
+.notetitle {
+	color: green;
+	font-size: 1.5em;
+}
+
+.notetime {
+	color: grey;
+	font-style: italic;
+}
+
+.aaaa {
+	background: black;
+	color: springgreen;
+	font-weight: bold;
+	border-radius: 5px;
+	outline: none;
+	border-width: 2px;
+}
+
+.message {
+	background: black;
+	color: beige;
+	border-radius: 5px;
+	border-style: inset;
+	outline: none;
+	border-width: 2px;
+	height: 200px;
+	font-size: 15px;
+}
+
+
+
+
