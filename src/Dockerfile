@@ -6,5 +6,5 @@ RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 VOLUME ["/app/notes.pickle"]
 COPY . /app
 EXPOSE 8080
-ENV FLASK_APP=squipnotes
+ENV FLASK_APP=app
 CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0", "--port=8080" ]
