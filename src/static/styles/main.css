@@ -1,3 +1,7 @@
+@font-face {
+  src: {{ url_for('static', filename='sspro-ita.ttf') }};
+}
+
 html {
 	background-color: #22242e;
 	font-family: 'Source Sans Pro';
