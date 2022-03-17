@@ -40,7 +40,7 @@ class note:
         </form>
         <div class="notetime">Created : {self.rendertime(self.createtime)}
         <br>Modified : {self.rendertime(self.modtime)}</div><br>
-        <div class="notetext">{markdown.markdown(self.text, extensions=['fenced_code', 'codehilite'])}</div><br>
+        <div class="notetext">{markdown.markdown(self.text, extensions=['fenced_code', 'codehilite', 'nl2br', 'smarty'])}</div><br>
         """
         return Markup(rendered)
 

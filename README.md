@@ -25,4 +25,4 @@ pygmentize -S dracula -f html -a .codehilite > styles.css
 
 ## Future features, todo
 * A squirrel ascii picture somewhere in the page :3
-* Better syntax coloring and markdown rendering in general
+* A link "export all in markdown"
