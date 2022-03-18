@@ -37,7 +37,7 @@ class note:
         <hr>
         <div class="notetitle">{Markup.escape(self.title)}</div>
         <form action="." method="GET" name="{self.createtime}">
-        <button type="submit" name="delete" value="{self.createtime}" class="delbutton">Delete</button>|<button type="submit" name="edit" value="{self.createtime}" class="editbutton">Edit</button>
+        <button type="submit" name="delete" value="{self.createtime}" class="delbutton" onclick="return confirm('Really ?')">Delete</button>|<button type="submit" name="edit" value="{self.createtime}" class="editbutton">Edit</button>
         </form>
         <div class="notetime">Created : {self.rendertime(self.createtime)}
         <br>Modified : {self.rendertime(self.modtime)}</div><br>
