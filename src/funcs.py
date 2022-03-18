@@ -76,3 +76,21 @@ def addnote(mynote: note):
     notes.append(mynote)
     notes = sorted(notes, key=lambda note: note.modtime, reverse=True)
     dumpnotes(notes)
+
+def exportnotes():
+    """
+    Export our notes in markdown, one after the other.
+    """
+    notes = getnotes()
+    rawtext = ""
+    for note in notes:
+        rawtext += f"#{note.title}\n"
+        rawtext += f"* Created: {note.rendertime(note.createtime)}\n"
+        rawtext += f"* Modified: {note.rendertime(note.modtime)}\n"
+        rawtext += f"{note.text}\n"
+        rawtext += f"-----\n\n"
+
+    return rawtext
+
+    return 
+

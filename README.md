@@ -24,6 +24,4 @@ pygmentize -S dracula -f html -a .codehilite > styles.css
 * Replace all css for .codehilite in src/static/main.css with what's in styles.css
 
 ## Future features, todo
-* A squirrel ascii picture somewhere in the page :3
-* A link "export all in markdown"
 * Replace pickle with sqlite or smth

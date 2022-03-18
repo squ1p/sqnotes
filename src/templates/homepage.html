@@ -7,19 +7,24 @@
 	</head>
 	<body>
 
-	<h1 class="pagetitle">$ ~/sqnotes</h1>
-	<div class="div1">
+		<h1 class="pagetitle">$ ~/sqnotes</h1><a class="exportlink" href="{{ url_for('rawnotes') }}">Raw notes</a>
 		<form action="." method="POST">
 			<input type="text" name="title" class="title" placeholder="Title"><br>
 			<textarea type="text" name="text" rows = "5" cols = "60*" class="text" placeholder="Text"></textarea><br>
 			<button type="submit" name="submit">Post</button>
-			<div class="notetime">Note : you can drag the textbox to make it bigger.</div>
+			<div class="notetime">Note : you can drag the textbox to make it bigger. Scroll down to see your previous notes.</div>
 		</form>
 		<br>
 	{{ nr }} 
-	<div>
 
   </body>
+  <footer>
+	<hr>
+	<div class="notetime">
+		<p>
+		You've reached the bottom. Made by Squip, 2022.
+		</p>
+	</div>
   </meta>
   </html>
 

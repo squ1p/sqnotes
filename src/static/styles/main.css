@@ -41,9 +41,25 @@ button {
 	cursor: pointer;
 }
 
+hr {
+	border: 3px dotted;
+}
+
+a {
+	color: #8be9fd;
+	text-decoration: underline;
+	font-style: italic;
+	font-size: 1em;
+}
+
+.exportlink {
+	float: right;
+}
+
 .pagetitle {
 	font-size: 3em;
 	color: #ff79c6;
+	float: left;
 }
 
 
@@ -71,18 +87,20 @@ button {
 */
 
 .text {
+	width: 100%;
 	background: #44475a;
 	color: #f8f8f2;
 	border-radius: 5px;
 	border-style: none;
 	outline: none;
 	border-width: 1px;
-	height: 200px;
+	height: 80%;
 	font-size: 15px;
 	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
 }
 
 .title {
+	width: 100%;
 	background: #44475a;
 	color: #f8f8f2;
 	border-radius: 5px;
@@ -93,6 +111,10 @@ button {
 	margin: 5px 0px 5px 0px;
 	font-size: 15px;
 	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+}
+
+.rawtext {
+	white-space: pre-wrap;
 }
 
 /* Syntax highlighting */

@@ -2,7 +2,7 @@
 #coding: utf-8
 from flask import Flask, render_template, Markup, request, redirect, url_for
 from classes import note
-from funcs import dumpnotes, getnotes, catnotes, delnote, findnote, addnote, mknotedir
+from funcs import dumpnotes, getnotes, catnotes, delnote, findnote, addnote, mknotedir, exportnotes
 
 #!---------- squiNotes.py ----------
 # My notes-taking app
@@ -31,6 +31,11 @@ def render():
         pass
     
     return render_template("homepage.html", nr = catnotes(getnotes()))
+
+#Export mode
+@app.route('/export', methods=['GET'])
+def rawnotes():
+    return render_template("export.html", rawnotes = exportnotes())
 
 #Edition mode
 @app.route('/edit', methods=['GET', 'POST'])
