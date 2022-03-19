@@ -40,4 +40,6 @@ docker-compose up -d
 ```
 
 ## Future features, todo
+* Just display the title of the notes and have a reading page 
+* Editing and going back erases the note :(
 * Replace pickle with sqlite or smth
