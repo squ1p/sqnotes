@@ -9,9 +9,10 @@
 
 	<h1 class="pagetitle">$ ~/sqnotes</h1>
 	<div class="div1">
-		<form action="." method="POST">
+		<form action="{{ url_for('edit') }}" method="POST">
 			<textarea type="text" name="title" class="title">{{ ntitle }}</textarea><br>
 			<textarea type="text" name="text" cols = "60*" class="text">{{ ntext }}</textarea><br>
+			<input type="hidden" name="notenumber" value="{{ notenumber }}" />
 			<button type="submit" name="submit">OK</button>
 			<div class="notetime">Note : you can drag the textbox to make it bigger.</div>
 		</form>

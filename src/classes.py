@@ -26,9 +26,9 @@ class note:
         timestamp = timestamp.strftime("%d/%m/%Y-%H:%M:%S")
         return timestamp
 
-    def flaskrender(self):
+    def titlerender(self):
         """
-        Render the note as html for flask, using flask.Markup
+        Render the note title and details as html for flask, using flask.Markup.
         """
         import markdown
         from flask import Markup
@@ -37,7 +37,25 @@ class note:
         <hr>
         <div class="notetitle">{Markup.escape(self.title)}</div>
         <form action="." method="GET" name="{self.createtime}">
-        <button type="submit" name="delete" value="{self.createtime}" class="delbutton" onclick="return confirm('Really ?')">Delete</button>|<button type="submit" name="edit" value="{self.createtime}" class="editbutton">Edit</button>
+        <button type="submit" name="delete" value="{self.createtime}" class="delbutton" onclick="return confirm('Really ?')">Delete</button>|<button type="submit" name="edit" value="{self.createtime}" class="editbutton">Edit</button>|<button type="submit" name="toread" value="{self.createtime}" class="readbutton">Read</button>
+        </form>
+        <div class="notetime">Created : {self.rendertime(self.createtime)}
+        <br>Modified : {self.rendertime(self.modtime)}</div><br>
+        """
+        return Markup(rendered)
+
+    def flaskrender(self):
+        """
+        Render the note whole content as html for flask, using flask.Markup
+        """
+        import markdown
+        from flask import Markup, url_for
+
+        rendered = f"""
+        <hr>
+        <div class="notetitle">{Markup.escape(self.title)}</div>
+        <form action="." method="GET" name="{self.createtime}">
+        <button type="submit" name="delete" value="{self.createtime}" class="delbutton" onclick="return confirm('Really ?')">Delete</button>|<button type="submit" name="edit" value="{self.createtime}" class="editbutton">Edit</button>|<a href="{ url_for('render') }" class="backlink">Back</a>
         </form>
         <div class="notetime">Created : {self.rendertime(self.createtime)}
         <br>Modified : {self.rendertime(self.modtime)}</div><br>

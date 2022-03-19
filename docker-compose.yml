@@ -13,7 +13,7 @@ services:
       #ports:
       #- 8080:8080
     labels:
-      - "traefik.http.routers.sqnotes.rule=Host(`notes.sq.lan`)"
+      - "traefik.http.routers.sqnotes.rule=Host(`notes.squi.fr`)"
       - "traefik.http.services.sqnotes.loadbalancer.server.port=8080"
       - "traefik.docker.network=traefik_traefik"
     networks:

@@ -43,7 +43,7 @@ def catnotes(notelist: list):
     """
     final = ""
     for note in notelist:
-        final += note.flaskrender()
+        final += note.titlerender()
 
     return final
 

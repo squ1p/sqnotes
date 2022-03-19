@@ -18,7 +18,8 @@ def render():
     #Delete has been clicked
     try:
         todelete = request.args.get("delete")
-        delnote(int(todelete))
+        if todelete is not None:
+            delnote(int(todelete))
     except Exception as e:
         pass
 
@@ -29,6 +30,15 @@ def render():
             return redirect(url_for('edit', notenumber=toedit))
     except Exception as e:
         pass
+
+    #Read has been clicked
+    try:
+        toread = request.args.get("toread")
+        if toread is not None:
+            return redirect(url_for('readmode', note=(int(toread))))
+    except Exception as e: 
+        print(e)
+        pass
     
     return render_template("homepage.html", nr = catnotes(getnotes()))
 
@@ -37,15 +47,36 @@ def render():
 def rawnotes():
     return render_template("export.html", rawnotes = exportnotes())
 
+#Read mode
+@app.route('/readmode', methods=['GET','POST'])
+def readmode():
+    if request.method == 'GET':
+        notenumber = request.args.get("note")
+        mynote = findnote(int(notenumber))
+    return render_template("read.html", note=mynote.flaskrender())
+
+
 #Edition mode
 @app.route('/edit', methods=['GET', 'POST'])
 def edit():
     import time
     if request.method == "GET":
+        print("GET")
         notenumber = request.args.get("notenumber")
         mynote = findnote(int(notenumber))
-        delnote(int(notenumber))
-    return render_template("edit.html", notenumber=notenumber, ntitle=mynote.title, ntext=mynote.text)
+        return render_template("edit.html", notenumber=notenumber, ntitle=mynote.title, ntext=mynote.text)
+    if request.method == "POST":
+        print("POST")
+        print(request.args.get("submit"))
+        notetitle = request.form['title']
+        notetext = request.form['text']
+        notenumber = int(request.form['notenumber'])
+        delnote(notenumber)
+        rightnow = int(time.time())
+        newnote = note(createtime=notenumber, modtime=rightnow, title=notetitle, text=notetext)
+        addnote(newnote)
+        return render_template("read.html", note=newnote.flaskrender())
+
 
 #Basic route, allows note creation
 @app.route('/', methods=['POST'])
