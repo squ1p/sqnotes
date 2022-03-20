@@ -128,10 +128,9 @@ a {
 */
 
 .text {
-	font-family: 'Noto Sans';
 	width: 100%;
-	background: #44475a;
-	color: #f8f8f2;
+	background: #fdf6e3;
+	color: #657b83;
 	border-radius: 5px;
 	border-style: none;
 	outline: none;
@@ -142,10 +141,9 @@ a {
 }
 
 .title {
-	font-family: 'Noto Sans';
 	width: 100%;
-	background: #44475a;
-	color: #f8f8f2;
+	background: #fdf6e3;
+	color: #657b83;
 	border-radius: 5px;
 	border-style: none;
 	outline: none;
