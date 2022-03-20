@@ -1,23 +1,23 @@
 @font-face {
-  font-family: "Noto Sans";
-  src: url(NotoSansMono-Medium.ttf);
+  font-family: "Work Sans";
+  src: url(WorkSans-Regular.ttf);
 }
 
 @font-face {
-  font-family: "Noto Sans";
-  src: url(NotoSansMono-Bold.ttf);
+  font-family: "Work Sans";
+  src: url(WorkSans-Bold.ttf);
   font-weight: bold;
 }
 
 @font-face {
-  font-family: "Noto Sans";
-  src: url(NotoSans-Italic.ttf);
+  font-family: "Work Sans";
+  src: url(WorkSans-Italic.ttf);
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Noto Sans";
-  src: url(NotoSans-BoldItalic.ttf);
+  font-family: "Work Sans";
+  src: url(WorkSans-BoldItalic.ttf);
   font-weight: bold;
   font-style: italic;
 }
@@ -25,7 +25,7 @@
 
 html {
 	background-color: #22242e;
-	font-family: 'Noto Sans';
+	font-family: 'Work Sans';
 	color: #f8f8f2;
 }
 
