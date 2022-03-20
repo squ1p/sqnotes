@@ -1,10 +1,16 @@
 # squip_notes
 
-This is a *very* basic notes-taking program. It uses python with flask and pickle, to give a really light and simple web interface for note taking.
+This is a basic notes-taking program. It uses python with flask and pickle, to give a really light and simple web interface for note taking.
 
 It uses the [dracula](https://github.com/dracula/dracula-theme) colors.
-
+![dark theme screenshot](./ssdark.png)
+![light theme screenshot](./sslight.png)
 ![Screenshot of the application](./squipnotes.png)
+
+# Features
+* No accounts : this is made to be used as a single page (you can't have multiple user accounts). This is best suited as a personnal, self-hosted application in your own network (or it could also work for a work team).
+* Simplicity: Simply get on the page and start writing. The notes syntax is markdown.
+* Themes : As for now, there is a default dark theme (dracula), and an optionnal light theme (loosely based on solarized light). They can be selected via the interface.
 
 # Themes (adding your own)
 All themes are in src/static/styles. They are the .css files. If you want to add your own, simply copy one of the existing files to a new one, named after the others. The numbers in the css file names determine the priority (make yours priority 0 to have it be the default).
