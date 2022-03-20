@@ -6,8 +6,11 @@
 	<title>sqnotes</title>
 	</head>
 	<body>
-		<form action="." method="GET"><button type="submit" value="switchpls" name="switchpls" class="themebutton">Change theme</button></form>
-		<h1 class="pagetitle">$ ~/sqnotes</h1><a class="exportlink" href="{{ url_for('rawnotes') }}">Raw notes</a>
+		<div class="topbar">
+			<h1 class="pagetitle">$ ~/sqnotes</h1>
+			<form action="." method="GET"><button type="submit" value="switchpls" name="switchpls" class="topbutton">Change theme</button></form> 
+			<button class="topbutton"><a class="exportlink" href="{{ url_for('rawnotes') }}">Raw notes |</a></button>
+		</div>
 		<form action="." method="POST">
 			<input type="text" name="title" class="title" placeholder="Title"><br>
 			<textarea type="text" name="text" rows = "5" cols = "60*" class="text" placeholder="Text"></textarea><br>

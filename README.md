@@ -6,6 +6,9 @@ It uses the [dracula](https://github.com/dracula/dracula-theme) colors.
 
 ![Screenshot of the application](./squipnotes.png)
 
+# Themes (adding your own)
+All themes are in src/static/styles. They are the .css files. If you want to add your own, simply copy one of the existing files to a new one, named after the others. The numbers in the css file names determine the priority (make yours priority 0 to have it be the default).
+
 ## Changing the code syntax highlight theme
 * Install pygmentyze (it then must be in your path; pip generally installs things in ~/.local/bin when using a Linux OS): 
 ```

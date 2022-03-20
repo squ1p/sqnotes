@@ -50,7 +50,7 @@ h5 {
 }
 
 button {
-	background-color: #22242e;
+	background-color: transparent;
 	border: none;
 	color: #8be9fd;
 	padding: 1px 2px;
@@ -58,7 +58,7 @@ button {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 1em;
-	font-style: italic;
+	font-style: normal;
 	cursor: pointer;
 }
 
@@ -69,16 +69,26 @@ hr {
 a {
 	color: #8be9fd;
 	text-decoration: underline;
-	font-style: italic;
+	font-style: normal;
 	font-size: 1em;
 }
 
-.themebutton {
+.topbar {
+	background-color: #22242e;
+	border: none;
+	color: #8be9fd;
+	text-align: left;
+	text-decoration: none;
+	display: block;
+}
+
+.topbutton {
 	float: right;
 }
 
 .exportlink {
-	float: right;
+	text-decoration: none;
+	font-style: normal;
 }
 
 .pagetitle {
@@ -86,7 +96,6 @@ a {
 	color: #ff79c6;
 	float: left;
 }
-
 
 .notetitle {
 	color: #ff79c6;
@@ -97,6 +106,12 @@ a {
 	color: #6272a4;
 	font-style: italic;
 }
+
+.backlink {
+	text-decoration: none;
+	font-style: normal;
+}
+
 
 /*
 .title {

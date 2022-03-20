@@ -58,7 +58,8 @@ def render():
                 csslink = choice(themes)
 
             #Commiting new theme, setting cookie for it, return template
-            resp = make_response(render_template("homepage.html", nr = catnotes(getnotes()), csslink = csslink))
+            #resp = make_response(render_template("homepage.html", nr = catnotes(getnotes()), csslink = csslink))
+            resp = make_response(redirect(request.path,code=302))
             resp.set_cookie('csslink', csslink)
             return resp
 
