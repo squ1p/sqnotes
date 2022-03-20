@@ -73,6 +73,10 @@ a {
 	font-size: 1em;
 }
 
+.themebutton {
+	float: right;
+}
+
 .exportlink {
 	float: right;
 }

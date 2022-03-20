@@ -94,3 +94,22 @@ def exportnotes():
 
     return 
 
+def getthemes():
+    """
+    Find all themes present in our css folder and return a nice list of
+    css links, for the user to pick into
+    """
+    from flask import url_for
+    from os import listdir
+
+    allfiles = listdir("./static/styles")
+    themefiles, themes = [], []
+    for myfile in allfiles:
+        if myfile.endswith(".css"):
+            themefiles.append(myfile)
+
+    for themefile in themefiles:
+        themes.append(url_for('static', filename=f'styles/{themefile}'))
+
+    return themes
+
