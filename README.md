@@ -50,3 +50,4 @@ docker-compose up -d
 
 ## Future features, todo
 * Replace pickle with sqlite or smth
+* Use as a CGI script rather than using flask's in-built server
