@@ -38,5 +38,5 @@ jobs:
             linux/amd64
             linux/arm64            
           push: true
-          tags: gitea.squi.fr/python/squi_notes:latest
+          tags: gitea.squi.fr/justine/squi_notes:latest
 
