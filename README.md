@@ -33,6 +33,8 @@ pygmentize -S dracula -f html -a .codehilite > styles.css
 * Replace all css for .codehilite in src/static/main.css with what's in styles.css
 
 ## Run with Docker
+Automated images for amd and arm should be included in this repo.
+
 ### Using traefik
 If you use traefik, you only have to change the url in the label "traefik.http.routers.sqnotes.rule". You can also modify the labels to rename the service from "sqnotes" to anything else.
 
@@ -51,3 +53,6 @@ docker-compose up -d
 ## Future features, todo
 * Replace pickle with sqlite or smth
 * Use as a CGI script rather than using flask's in-built server
+
+## Credits
+Automation : git.rznet.fr
